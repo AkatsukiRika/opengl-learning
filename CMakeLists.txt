@@ -8,6 +8,14 @@ find_package(glfw3 REQUIRED)
 
 include_directories(${GLAD_INCLUDE})
 
-add_executable(OpenGL src/shader.cpp src/includes/shader_s.h glad.c)
+add_executable(
+        OpenGL
+        src/includes/shader_s.h
+        src/includes/stb_image.h
+        src/includes/utils.h
+        src/includes/utils.cpp
+        src/texture.cpp
+        glad.c
+)
 
 target_link_libraries(OpenGL glfw)
