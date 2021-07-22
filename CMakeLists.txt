@@ -14,7 +14,8 @@ add_executable(
         src/includes/stb_image.h
         src/includes/utils.h
         src/includes/utils.cpp
-        src/transform.cpp
+        src/includes/values.h
+        src/coordinates.cpp
         glad.c
 )
 

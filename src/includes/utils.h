@@ -21,6 +21,14 @@ namespace Utils {
     );
 
     /**
+     * 与上一个函数相同，但不创建EBO
+     */
+     unsigned int* initObjects(
+         float* vertices,
+         int verticesSize
+     );
+
+    /**
      * @param path 图片文件名
      * @param verticalFlip 载入图片时是否翻转y轴
      * @return texture

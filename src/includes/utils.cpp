@@ -64,6 +64,24 @@ unsigned int* Utils::initObjects(
     return result;
 }
 
+unsigned int * Utils::initObjects(float *vertices, int verticesSize) {
+    unsigned int VAO, VBO;
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+
+    glBindVertexArray(VAO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, verticesSize, vertices, GL_STATIC_DRAW);
+    std::cout << "verticesSize = " << verticesSize << std::endl;
+
+    static unsigned int result[2];
+    result[0] = VAO;
+    result[1] = VBO;
+
+    return result;
+}
+
 unsigned int Utils::initTexture(const char* path, bool verticalFlip) {
     unsigned int texture;
     glGenTextures(1, &texture);
