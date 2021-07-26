@@ -15,7 +15,7 @@ add_executable(
         src/includes/utils.h
         src/includes/utils.cpp
         src/includes/values.h
-        src/coordinates.cpp
+        src/camera.cpp
         glad.c
 )
 
